@@ -1,2 +1,5 @@
- 1.For Iseed Database:--> php artisan iseed menus,user_menu_actions --force
-======================
+ 1. For Iseed Database:--> php artisan iseed menus,user_menu_actions --force
+=======================
+
+ 2. Add new column to Existing DataTable:--> php artisan make:migration add_product_code_to_products_table --table=products
+=========================================
