@@ -1,0 +1,2 @@
+ 1.For Iseed Database:--> php artisan iseed menus,user_menu_actions --force
+======================
