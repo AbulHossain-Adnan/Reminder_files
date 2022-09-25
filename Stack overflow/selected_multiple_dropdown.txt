@@ -1,0 +1,16 @@
+1. url -> https://stackoverflow.com/questions/69295288/how-can-i-edit-multi-select-box-in-laravel
+
+Example: 
+
+controller:
+===========
+1. $data['user_district_ids'] = UserDistrict::where('user_id',$id)->pluck('district_id')->toArray();
+
+blade:
+======
+ <select name="district_id[]" id="district_id" class="{{$error_class}} form-control select2 district_id dropdown_field js-multi-select" multiple="multiple" onchange=SelectChange("{{route('get_multiple_fire_station')}}","fire_station_id",this)>
+             <option value="">@lang('common.select')</option>
+             @foreach($districts as $key=>$district)
+             <option value="{{$key}}"  {{is_array($user_district_ids) && in_array($key, $user_district_ids) ? 'selected' : '' }}> {{$division}}</option>
+             @endforeach
+  </select>
