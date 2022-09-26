@@ -1,0 +1,21 @@
+Laravel project upload on Main Domain
+--------------------------------------
+
+1. First Go to file manager and create projectfolderfiles  into root derectory where we will store our main project files.
+
+2. second step Go inside public_html folder and create project_publicFiles name for storing project public files .
+
+3. Now move all public files into public_html/project_publicFiles .
+
+4.Now inside project_publicFiles edit index.php like bellow 
+
+			require __DIR__.'/../../projectfolderfiles/vendor/autoload.php';
+
+			$app = require_once __DIR__.'/../../projectfolderfiles/bootstrap/app.php';
+
+
+5. create a database and user for our project.
+
+store database password : Fx+=I7@X3@X=
+
+
