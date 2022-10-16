@@ -1,0 +1,43 @@
+ Original_migration:
+
+ public function up()
+    {
+        Schema::create('other_repair_summary_details', function (Blueprint $table) {
+            $table->id();
+            $table->string('repair_title')->nullable();
+            $table->foreignId('other_repair_summary_id')->constrained();
+            $table->foreignId('employee_mechanic_id')->constrained('employees');
+            $table->text('other_repair_details')->nullable();
+            $table->integer('quantity')->nullable();
+            $table->date('exam_date')->nullable();
+            $table->text('remark')->nullable();
+            $table->timestamps();
+        });
+    }
+
+
+
+now change empoloyee_mechanic_id foreignId to nullable:
+-----------------------------------------------------
+
+
+public function up()
+    {
+        Schema::table('other_repair_summary_details', function (Blueprint $table) {
+            $table->unsignedBigInteger('employee_mechanic_id')->nullable()->change();
+            $table->dropForeign(['employee_mechanic_id']);
+            $table->foreign('employee_mechanic_id')->references('id')->on('employees');
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        Schema::table('other_repair_summary_details', function (Blueprint $table) {
+            $table->unsignedBigInteger('employee_mechanic_id')->change();
+        });
+    }
