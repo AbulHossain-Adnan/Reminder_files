@@ -1,0 +1,48 @@
+vue and nuxt rendaring:
+----------------------
+
+
+Vue Client side rendaring (CSR):
+===============================
+
+1.Browser            2.Vue server
+
+
+:www.mywebsite.com ,when we request this site from our browser to vue server for getting ui eliment ,first stage
+
+
+ it give empty HTML template so ul eliment not showed on client side.after fiew time latter vue server give javascript
+
+file with require eliment after that browser parse all code eliment and then  ui eliment render on client side.this 
+
+type of rendaring call Client side rendaring because in rendaring on client side not on server.
+
+
+
+
+Server side rendaring (SSR):
+===========================
+
+1.Browser            2.Vue server
+
+
+:www.mywebsite.com ,when we request this site from our browser to Server its not only give empty html file its giving 
+
+html and javascript file both together so for getting ui eliment client just use the eliments.this is called Server side
+
+rendaring.
+
+
+Nuxt: (ssr+csr) = Univarsal rendaring:
+
+1.Browser            2.Vue server
+
+
+:www.mywebsite.com ,when we request this site from our browser to vue server for getting ui eliment .server give html
+
+static ui.this is displayed on client side but not interective when server returned javascript then ui eliment become 
+
+interactive this is known as univarsal rendaring.
+
+
+

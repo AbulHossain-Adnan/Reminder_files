@@ -1,0 +1,17 @@
+
+	nuxt form validation:
+	---------------------
+
+1. we will create backend validation from passing request validation.
+
+2. now will will create veeValidation plugin for displaying form validation:
+
+************************************************
+
+vForm npm => https://www.npmjs.com/package/vform
+
+************************************************
+
+3.
+
+
