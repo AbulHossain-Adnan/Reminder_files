@@ -1,0 +1,5 @@
+1.assesment complete houar por .inspector er kase license abedon a jai tarpor all caiteria flap kore license 
+issue kore inspector .tokhon license list a application show kore but license number and date generate hoi na ,ayta genarate hoi jokhon
+inspector ordhotono kono kormokortake  (dad_dhaka,dad) ogrosor kore dey and sey dad,dad_dhaka license issue date select kore onumodon korley
+license er all data display korbe. inspector license data select korte pare na.
+
