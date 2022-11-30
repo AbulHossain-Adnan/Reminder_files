@@ -1,0 +1,102 @@
+laravel 9 and vue3 with vite compile
+-------------------------------------
+
+1* Install vue:
+--------------
+
+   ( npm install vue@next vue-loader@next )
+
+2: ( npm install  )
+
+3: ( npm run dev )
+
+4: vite plugin install: https://www.npmjs.com/package/@vitejs/plugin-vue
+
+ ( npm i @vitejs/plugin-vue )
+ 
+ 5: vite.config.js modifile:
+ 
+ // vite.config.js
+import vue from '@vitejs/plugin-vue'
+
+export default {
+  plugins: [vue()]
+  
+}
+
+
+
+app.jss: 
+
+import './bootstrap';
+
+import { createApp } from 'vue'
+
+import appcomponent from './layouts/app.vue'
+import homecomponent from './layouts/home.vue'
+
+
+createApp(appcomponent).mount('#app')
+createApp(homecomponent).mount('#home')
+
+in blade file: 
+
+ @vite(['resources/css/app.css', 'resources/js/app.js'])
+ 
+   <div id="app"> </div>
+   
+   
+   
+   
+   Vue route setup: 
+   ------------------
+   
+   
+   1.install vue route link: 
+   
+   = https://router.vuejs.org/installation.html#direct-download-cdn
+   
+   
+   :npm install vue-router@next
+   
+   
+   2. resouces/js/routes.js:
+   
+   import VueRouter from 'vue-router'; //for all router method
+   
+   import { createRuter, createWebHistory} form 'vue-router'; // for require method createRouter ,createWebHistory
+   
+   import home from './pages/home.vue';  //for import vue pages
+   import login from './pages/login.vue';
+   
+   const routes = [
+   {
+   path: '/',
+   component: home,
+   name: 'home'
+   
+   },
+    {
+   path: '/login',
+   component: login,
+   name: 'login'
+   
+   }
+   ];
+   
+   now return route:
+   
+   const route = createRouter({
+   routes,
+   history: createWebHistory()
+   
+   })
+   
+   
+   
+    
+      
+
+ 
+ 
+ 
